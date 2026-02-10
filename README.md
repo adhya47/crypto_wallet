@@ -22,22 +22,24 @@ Solana Web3.js and Ethers.js with GetBlock RPC infrastructure.
 
 ## Project Structure
 
-```
 src/
- ├── solu.js       # Solana transactions
- ├── index.js      # Ethereum transactions
- ├── main.jsx
- └── style.css
-```
+├── components/
+│ ├── Login.jsx # Wallet creation/import
+│ ├── WalletDashboard.jsx # Main dashboard
+│ └── AssetCard.jsx # Individual chain UI
+├── context/
+│ └── WalletContext.jsx # Global state management
+├── services/
+│ ├── blockchain.js # ETH/SOL transaction logic
+│ └── wallet.js # Key generation & derivation
+├── styles/
+│ └── custom.css # Custom CSS styling
+├── main.jsx # App entry point
+└── index.css # Global styles
 
 ## Environment Variables
 
-Create a `.env` file in root:
-
-```
-VITE_GETBLOCK_SOLANA=your_solana_rpc_url
-VITE_GETBLOCK_ETH=your_ethereum_rpc_url
-```
+Create a `.env.local` file in root:
 
 ## Installation
 
@@ -58,6 +60,31 @@ Do NOT use real private keys or mnemonics in production.
 - Hardware wallet support
 
 ---
+
+📚 Learning Objectives
+Technical Skills Developed:-
+Blockchain RPC integration
+
+Multi-chain architecture patterns
+
+Client-side key management
+
+Transaction building & signing
+
+React state management with Context API
+
+Error handling for blockchain operations
+
+Architectural Understanding:-
+Hierarchical Deterministic (HD) wallets
+
+JSON-RPC communication patterns
+
+Testnet vs Mainnet environments
+
+Fee estimation and gas optimization
+
+## User experience for financial apps
 
 Frequently Asked Questions
 Q: Can I use this with real cryptocurrency?
